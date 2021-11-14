@@ -15,7 +15,7 @@
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "44.0",
-    "packageAliases": {
+    "packageAliases": { 
         "Jenkins": "0Ho090000004CUrCAM",
         "Jenkins@0.1.0-1": "04t09000000zH8eAAE"
     }
