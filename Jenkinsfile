@@ -14,7 +14,6 @@ node {
     
     def toolbelt = tool 'toolbelt'
 
-    def server_key_file = env.server_key_file
 
     // -------------------------------------------------------------------------
     // Check out code from source control.
@@ -32,7 +31,7 @@ node {
     
     withEnv(["HOME=${env.WORKSPACE}"]) {
         
-        //withCredentials([file(credentialsId: SERVER_KEY_CREDENTALS_ID, variable: 'server_key_file')]) {
+        withCredentials([file(credentialsId: SERVER_KEY_CREDENTALS_ID, variable: 'server_key_file')]) {
 
             // -------------------------------------------------------------------------
             // Authorize the Dev Hub org with JWT key and give it an alias.
@@ -43,7 +42,7 @@ node {
                 if (rc != 0) {
                     error 'Salesforce dev hub org authorization failed.'
                 }
-            //}
+            }
 
 
             // -------------------------------------------------------------------------
