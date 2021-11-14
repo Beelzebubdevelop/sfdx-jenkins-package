@@ -11,9 +11,10 @@ node {
     def PACKAGE_NAME='0Ho090000004CUrCAM'
     def PACKAGE_VERSION
     def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
-
+    
     def toolbelt = tool 'toolbelt'
 
+    def server_key_file = env.server_key_file
 
     // -------------------------------------------------------------------------
     // Check out code from source control.
